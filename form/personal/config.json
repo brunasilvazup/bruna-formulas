@@ -1,0 +1,28 @@
+{
+  "dockerImageBuilder": "ritclizup/rit-go-builder",
+  "inputs": [
+    {
+      "cache": {
+        "active": true,
+        "newLabel": "Novo nome. ",
+        "qty": 2
+      },
+      "label": "Seu nome: ",
+      "name": "input_name",
+      "required": true,
+      "tutorial": "Seu nome para contato",
+      "type": "text"
+    },
+    {
+      "cache": {
+        "active": true,
+        "newLabel": "Nova data de nascimento. ",
+        "qty": 2
+      },
+      "label": "Sua data de nascimento: ",
+      "name": "input_birth_date",
+      "required": true,
+      "type": "text"
+    }
+  ]
+}
