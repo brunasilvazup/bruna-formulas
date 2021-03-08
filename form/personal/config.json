@@ -23,6 +23,17 @@
       "name": "input_birth_date",
       "required": true,
       "type": "text"
+    },
+    {
+      "cache": {
+        "active": true,
+        "newLabel": "Novo país. ",
+        "qty": 2
+      },
+      "label": "Seu país de origem: ",
+      "name": "input_country",
+      "required": true,
+      "type": "text"
     }
   ]
 }

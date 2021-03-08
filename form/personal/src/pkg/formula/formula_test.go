@@ -10,8 +10,7 @@ import (
 
 func TestFormula_Run(t *testing.T) {
 	type fields struct {
-		Name      string
-		BirthDate string
+		Name, BirthDate, Country string
 	}
 	tests := []struct {
 		name       string
@@ -23,11 +22,13 @@ func TestFormula_Run(t *testing.T) {
 			fields: fields{
 				Name:      "Dennis",
 				BirthDate: "9 de setembro de 1941",
+				Country:   "EUA",
 			},
 			wantWriter: func() string {
 				return fmt.Sprintf("Hello World!\n") +
 					color.FgGreen.Render(fmt.Sprintf("My name is Dennis.\n")) +
-					color.FgYellow.Render(fmt.Sprintf("My birthday is 9 de setembro de 1941.\n"))
+					color.FgYellow.Render(fmt.Sprintf("My birthday is 9 de setembro de 1941.\n")) +
+					color.FgBlue.Render(fmt.Sprintf("My country is EUA.\n"))
 			}(),
 		},
 	}
@@ -36,6 +37,7 @@ func TestFormula_Run(t *testing.T) {
 			f := Formula{
 				Name:      tt.fields.Name,
 				BirthDate: tt.fields.BirthDate,
+				Country:   tt.fields.Country,
 			}
 			writer := &bytes.Buffer{}
 			f.Run(writer)
