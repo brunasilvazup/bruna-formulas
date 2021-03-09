@@ -12,7 +12,7 @@ import (
 
 // Formula is the struct aboud inputs
 type Formula struct {
-	Name, BirthDate, Country string
+	Name, BirthDate, Country, State string
 }
 
 // Run is the main function of formula
@@ -23,6 +23,7 @@ func (f Formula) Run(writer io.Writer) {
 	result += color.FgGreen.Render(fmt.Sprintf("My name is %s.\n", f.Name))
 	result += color.FgYellow.Render(fmt.Sprintf("My birthday is %s.\n", f.BirthDate))
 	result += color.FgBlue.Render(fmt.Sprintf("My country is %s.\n", f.Country))
+	result += color.FgGreen.Render(fmt.Sprintf("My state is %s.\n", f.State))
 
 	if _, err := fmt.Fprintf(writer, result); err != nil {
 		panic(err)

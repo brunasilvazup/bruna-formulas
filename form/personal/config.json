@@ -35,6 +35,17 @@
       "name": "input_country",
       "required": true,
       "type": "text"
+    },
+    {
+      "cache": {
+        "active": true,
+        "newLabel": "Novo estado. ",
+        "qty": 2
+      },
+      "label": "Seu estado de origem: ",
+      "name": "input_state",
+      "required": true,
+      "type": "text"
     }
   ]
 }
