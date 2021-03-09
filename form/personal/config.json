@@ -1,5 +1,6 @@
 {
   "dockerImageBuilder": "ritclizup/rit-go-builder",
+  "RequireLatestVersion": true,
   "inputs": [
     {
       "cache": {
